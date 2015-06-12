@@ -2,9 +2,29 @@
 Title:    Milight / LimitlessLED LED Strip and MRBus Integration Example
 Authors:  Nathan Holmes <maverick@drgw.net>, Colorado, USA
           Michael Petersen <railfan@drgw.net>, Colorado, USA
-File:     Milight.cpp
+File:     milight_mrbus.ino
 License:  GNU General Public License v3
 *************************************************************************/
+
+/*************************************************************************
+!!! NOTE !!!
+
+This example assumes that you also have the MRBusArduino and MRBusClock
+libraries installed.  
+
+MRBusArduino is in the src/ directory of the MRB-ARD project:
+https://github.com/IowaScaledEngineering/MRB-ARD
+
+MRBusClock is available here:
+https://github.com/IowaScaledEngineering/MRBusClock
+
+
+For this example to do anything interesting, you also need a MRBus network
+joined to your Arduino stack via a MRB-ARD shield or similar, and probably 
+a source of MRBus fast time, such as the Iowa Scaled Engineering MRB-FCM 
+or MRBW-FCM.
+*************************************************************************/
+
 
 #include <SPI.h>
 #include <Ethernet.h>
